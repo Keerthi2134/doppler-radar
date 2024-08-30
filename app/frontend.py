@@ -1,20 +1,26 @@
 import tkinter as tk
 from tkinter import filedialog
 import numpy as np
+import pandas as pd
+import pickle
 
+# Load the trained model
+with open('../model/model.pkl', 'rb') as f:
+    model = pickle.load(f)
+
+# Load data function
+def load_data(file_path):
+    df = pd.read_csv(file_path, header=None)
+    data = df.iloc[:, :-1].values.flatten()
+    return data
+
+# GUI function to classify signal
 def classify_signal():
-    # Load the data file
     file_path = filedialog.askopenfilename()
     data = load_data(file_path)
     
-    # Perform STFT and extract features
-    _, _, spectrogram = perform_stft(data)
-    mean_freq, energy = extract_features(spectrogram)
-    
-    # Classify using the loaded model
-    features = np.array([mean_freq, energy]).reshape(1, -1)
+    features = data.reshape(1, -1)
     prediction = model.predict(features)
-    
     result = 'Drone' if prediction[0] == 1 else 'Bird'
     result_label.config(text=f'Class: {result}')
 
