@@ -5,7 +5,7 @@ import pandas as pd
 import pickle
 
 # Load the trained model
-with open('../model/model.pkl', 'rb') as f:
+with open('model.pkl', 'rb') as f:
     model = pickle.load(f)
 
 # Load data function
