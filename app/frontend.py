@@ -11,13 +11,18 @@ with open('model.pkl', 'rb') as f:
 # Load data function
 def load_data(file_path):
     df = pd.read_csv(file_path, header=None)
-    data = df.iloc[:, :-1].values.flatten()
+    data = df.iloc[0, :5000].values  # Ensure only 5000 features are selected
     return data
 
 # GUI function to classify signal
 def classify_signal():
     file_path = filedialog.askopenfilename()
     data = load_data(file_path)
+    
+    # Ensure the input data has exactly 5000 features
+    if data.shape[0] != 5000:
+        result_label.config(text="Error: Incorrect data format. Expected 5000 features.")
+        return
     
     features = data.reshape(1, -1)
     prediction = model.predict(features)
