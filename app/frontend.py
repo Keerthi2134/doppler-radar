@@ -6,8 +6,16 @@ import pickle
 from tkinter import ttk
 
 # Load the trained model
-with open('model.pkl', 'rb') as f:
-    model = pickle.load(f)
+model_path = 'model.pkl'
+try:
+    with open(model_path, 'rb') as f:
+        model = pickle.load(f)
+except FileNotFoundError:
+    messagebox.showerror("Error", f"Model file {model_path} not found.")
+    exit()
+except pickle.PickleError:
+    messagebox.showerror("Error", "Error loading the model.")
+    exit()
 
 # Load data function
 def load_data(file_path):
@@ -25,7 +33,7 @@ def classify_signal():
         data = load_data(file_path)
         
         # Ensure the input data has exactly 5000 features
-        if data.shape[0] != 5000:
+        if len(data) != 5000:
             messagebox.showerror("Error", "Incorrect data format. Expected 5000 features.")
             return
         
