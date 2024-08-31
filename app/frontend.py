@@ -44,11 +44,11 @@ def classify_signal():
 # GUI Setup
 root = tk.Tk()
 root.title("Micro-Doppler Classification")
-root.geometry("400x300")
+root.geometry("500x350")
 root.configure(bg='#f0f0f0')
 
 # Title Label
-title_label = tk.Label(root, text="Micro-Doppler Classification", font=("Helvetica", 16, "bold"), bg='#f0f0f0', fg='#333')
+title_label = tk.Label(root, text="Micro-Doppler Classification", font=("Helvetica", 18, "bold"), bg='#f0f0f0', fg='#333')
 title_label.pack(pady=20)
 
 # Frame for buttons and result
@@ -60,20 +60,20 @@ classify_button = ttk.Button(frame, text="Choose Signal File", command=classify_
 classify_button.grid(row=0, column=0, padx=20, pady=10)
 
 # Result Label
-result_label = tk.Label(frame, text="Class: ", font=("Helvetica", 14), bg='#f0f0f0', fg='#555')
+result_label = tk.Label(frame, text="Class: ", font=("Helvetica", 16), bg='#f0f0f0', fg='#555')
 result_label.grid(row=1, column=0, padx=20, pady=10)
 
 # Progress Label
-progress_label = tk.Label(frame, text="", font=("Helvetica", 10), bg='#f0f0f0', fg='#888')
+progress_label = tk.Label(frame, text="", font=("Helvetica", 12), bg='#f0f0f0', fg='#888')
 progress_label.grid(row=2, column=0, padx=20, pady=10)
 
 # Styling for buttons (using ttk style)
 style = ttk.Style()
-style.configure("TButton", font=("Helvetica", 12), padding=6, background="#007ACC", foreground="white")
-style.map("TButton", background=[('active', '#005F9E')])
+style.configure("TButton", font=("Helvetica", 14), padding=8, background="#007ACC", foreground="black")
+style.map("TButton", background=[('active', '#005F9E')], foreground=[('active', 'white')])
 
 # Footer Label
-footer_label = tk.Label(root, text="Developed for Hackathon 2024", font=("Helvetica", 10), bg='#f0f0f0', fg='#888')
+footer_label = tk.Label(root, text="Developed for Hackathon 2024", font=("Helvetica", 12), bg='#f0f0f0', fg='#888')
 footer_label.pack(side=tk.BOTTOM, pady=10)
 
 root.mainloop()
