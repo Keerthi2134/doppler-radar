@@ -128,3 +128,11 @@ Contains the script to train and save the machine learning model.
 
 6. **Run the Frontend Application**:
    - Execute `frontend.py` to launch the GUI for radar data classification.
+
+## Screenshots
+<img width="946" alt="image" src="https://github.com/user-attachments/assets/9bf25817-0436-4190-a15d-74552aca4f14">
+<img width="946" alt="image" src="https://github.com/user-attachments/assets/00995a90-e0a6-452b-bc89-e1a9ecb3a9fd">
+<img width="947" alt="image" src="https://github.com/user-attachments/assets/b5339a23-6719-4101-af00-5cf0106fa0f1">
+<img width="944" alt="image" src="https://github.com/user-attachments/assets/bae5478e-ce6b-4297-a786-c2bbf570ed37">
+
+
