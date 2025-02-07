@@ -1,6 +1,7 @@
 # Smart India Hackathon 2024: Micro-Doppler Based Target Classification
 
-**Team Name**: Whiskey Tango Foxtrot
+**Team Name**: Whiskey Tango Foxtrot.
+
 
 ## Problem Statement Overview
 
