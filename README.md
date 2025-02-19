@@ -147,13 +147,12 @@ Radar data acquisition and micro-Doppler feature extraction.
 Machine learning-based classification models (SVM, CNN, LSTM).
 Preprocessing techniques for noise reduction and signal enhancement.
 Real-time processing through a backend API and GUI.
-
 **Excluded:**
 Hardware implementation of radar sensors (uses simulated data).
 Multi-class classification beyond drones and birds.
 Environmental factors like weather interference in classification.
 
-**Deliverables**
+**Deliverables:**
 A trained machine learning model for drone-bird classification.
 Backend API to process radar signals and return classification results.
 GUI-based frontend for user-friendly interaction.
