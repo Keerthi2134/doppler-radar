@@ -130,6 +130,38 @@ Contains the script to train and save the machine learning model.
 6. **Run the Frontend Application**:
    - Execute `frontend.py` to launch the GUI for radar data classification.
 
+## Project Scope 
+
+The project focuses on using micro-Doppler radar signatures to classify aerial objects, distinguishing drones from birds in real-time surveillance applications. This solution enhances security, airspace management, and wildlife monitoring.
+
+**Real-Life Applications**
+Aviation Security: Preventing drone intrusions near airports.
+Military and Defense: Detecting unauthorized drones in restricted areas.
+Wildlife Conservation: Monitoring bird migration patterns.
+Industrial Facilities: Securing critical infrastructure from drone threats.
+
+**Project Scope Boundaries**
+
+**Included:**
+Radar data acquisition and micro-Doppler feature extraction.
+Machine learning-based classification models (SVM, CNN, LSTM).
+Preprocessing techniques for noise reduction and signal enhancement.
+Real-time processing through a backend API and GUI.
+
+**Excluded:**
+Hardware implementation of radar sensors (uses simulated data).
+Multi-class classification beyond drones and birds.
+Environmental factors like weather interference in classification.
+
+**Deliverables**
+A trained machine learning model for drone-bird classification.
+Backend API to process radar signals and return classification results.
+GUI-based frontend for user-friendly interaction.
+Synthetic dataset generation script for training and evaluation.
+Achieve a classification accuracy of 90%+ on test datasets.
+Process radar signals in real-time (low-latency inference).
+Successful deployment in security and surveillance applications.
+
 ## Screenshots
 <img width="946" alt="image" src="https://github.com/user-attachments/assets/9bf25817-0436-4190-a15d-74552aca4f14">
 <img width="946" alt="image" src="https://github.com/user-attachments/assets/00995a90-e0a6-452b-bc89-e1a9ecb3a9fd">
